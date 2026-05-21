@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELIER VISTA | İç Mimarlık & Cafe Stüdyosu</title>
+    <meta name="description" content="Tasarımın ve kahvenin buluşma noktası. Lüks iç mimari projeleri ve nitelikli kahve deneyimi.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Dynamic Glass Navigation Bar -->
+    <header id="main-header">
+        <div class="logo">
+            <a href="#hero">what do you want</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#studio-section">Stüdyo</a></li>
+                <li><a href="#cafe-section">Kafe</a></li>
+                <li><a href="#partner-showcase-section">Ortaklarımız</a></li>
+                <li><a href="#simulator-section" class="nav-btn">Simülatör & Panel</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Split Screen Hero Section -->
+    <section id="hero" class="split-hero">
+        <!-- Cafe Side -->
+        <div class="hero-pane cafe-pane" id="pane-cafe">
+            <div class="pane-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75)), url('assets/hero_cafe.png');"></div>
+            <div class="pane-content">
+                <span class="tag">DENEYİM ALANI</span>
+                <h1>THE CAFE</h1>
+                <p>Nitelikli kahve kokusunun, özenle tasarlanmış mekan detaylarıyla buluştuğu sosyal yaşam alanı.</p>
+                <a href="#cafe-section" class="btn btn-primary">Keşfet & Menü</a>
+            </div>
+        </div>
+        
+        <!-- Studio Side -->
+        <div class="hero-pane studio-pane" id="pane-studio">
+            <div class="pane-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75)), url('assets/hero_studio.png');"></div>
+            <div class="pane-content">
+                <span class="tag">MİMARLIK STÜDYOSU</span>
+                <h1>THE STUDIO</h1>
+                <p>Estetiğin, fonksiyonelliğin ve lüksün harmanlandığı sıra dışı iç mimari projeler.</p>
+                <a href="#studio-section" class="btn btn-secondary">Projeleri İncele</a>
+            </div>
+        </div>
+
+        <div class="split-divider"></div>
+    </section>
+
+    <!-- Studio Section (Interior Design Portfolio) -->
+    <section id="studio-section" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">ATELIER VISTA STUDIO</span>
+                <h2>İç Mimarlık Projelerimiz</h2>
+                <div class="bar"></div>
+                <p class="desc">Her mekan bir hikaye anlatır. Lüks konut, ofis ve ticari alanlarda fonksiyonel ve sanatsal mekanlar tasarlıyoruz.</p>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/project_living.png" alt="Lüks Salon Tasarımı">
+                        <div class="card-overlay">
+                            <a href="#" class="view-project-btn"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Aura Living Room</h3>
+                        <span class="proj-type">Konut Projesi - Nişantaşı</span>
+                        <div class="proj-price">Fiyat: Projeye Özel / Teklif Alınız</div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/project_kitchen.png" alt="Modern Mutfak Tasarımı">
+                        <div class="card-overlay">
+                            <a href="#" class="view-project-btn"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Monolith Kitchen</h3>
+                        <span class="proj-type">Mutfak Tasarımı - Göktürk</span>
+                        <div class="proj-price">Fiyat: Projeye Özel / Teklif Alınız</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote/Contact Action -->
+            <div class="studio-action-box">
+                <div class="action-content">
+                    <h3>Hayalinizdeki Mekanı Birlikte Tasarlayalım</h3>
+                    <p>Alan keşfi ve konsept danışmanlığı için ekibimizle iletişime geçin.</p>
+                </div>
+                <a href="#contact-modal" class="btn btn-gold" id="quote-btn">Keşif Randevusu Al</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cafe Section (Menu & Vibe) -->
+    <section id="cafe-section" class="section-padding dark-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">ATELIER VISTA CAFE</span>
+                <h2>Gurme Kahve Deneyimi</h2>
+                <div class="bar"></div>
+                <p class="desc">Mimari ofisimizin alt katında yer alan kafemizde, dünyanın en seçkin bölgelerinden gelen kahve çekirdeklerini sanatsal bir atmosferde sunuyoruz.</p>
+            </div>
+
+            <div class="cafe-grid">
+                <!-- Cafe Image Showcase -->
+                <div class="cafe-showcase-img" style="background-image: url('assets/hero_cafe.png');">
+                    <div class="showcase-badge">
+                        <h4>%100 Arabica</h4>
+                        <p>Nitelikli Çekirdekler</p>
+                    </div>
+                </div>
+
+                <!-- Cafe Menu -->
+                <div class="cafe-menu-wrapper">
+                    <h3>Haftalık Seçkiler</h3>
+                    <ul class="menu-list">
+                        <li>
+                            <div class="menu-item-header">
+                                <span class="item-name">Double Espresso</span>
+                                <span class="item-price">65 ₺</span>
+                            </div>
+                            <p class="item-desc">Hafif asidik, narenciye ve bitter çikolata notalı.</p>
+                        </li>
+                        <li>
+                            <div class="menu-item-header">
+                                <span class="item-name">Cortado</span>
+                                <span class="item-price">80 ₺</span>
+                            </div>
+                            <p class="item-desc">Eşit oranda espresso ve kadifemsi sıcak süt köpüğü.</p>
+                        </li>
+                        <li>
+                            <div class="menu-item-header">
+                                <span class="item-name">V60 Drip Coffee</span>
+                                <span class="item-price">95 ₺</span>
+                            </div>
+                            <p class="item-desc">Etiyopya Yirgacheffe çekirdeklerinden demlenmiş berrak gövde.</p>
+                        </li>
+                        <li>
+                            <div class="menu-item-header">
+                                <span class="item-name">Cold Brew (Steeped 18h)</span>
+                                <span class="item-price">110 ₺</span>
+                            </div>
+                            <p class="item-desc">18 saat boyunca soğuk demlenmiş pürüzsüz içimli kahve.</p>
+                        </li>
+                    </ul>
+                    <div class="menu-note">
+                        <p><i class="fa-solid fa-circle-info"></i> Kafemiz aynı zamanda bir tasarım showroom'udur. Oturduğunuz tüm mobilyalar ve aydınlatmalar stüdyomuz tarafından tasarlanmıştır ve sipariş edilebilir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Products Showcase (Dynamically populated from Simulator) -->
+    <section id="partner-showcase-section" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">İŞ ORTAKLARIMIZIN SEÇKİLERİ</span>
+                <h2>Tasarımcı Koleksiyonu</h2>
+                <div class="bar"></div>
+                <p class="desc">Birlikte çalıştığımız zanaatkarlar, aydınlatma markaları ve özel mobilya üreticilerinin Atelier Vista onaylı ürünleri.</p>
+            </div>
+
+            <!-- Dynamic Products Container -->
+            <div class="products-grid" id="approved-products-container">
+                <!-- Initial Mockup Products (Pre-approved) -->
+                <div class="product-card" data-id="mock-1">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80" alt="Terrazzo Masa Lambası">
+                        <span class="partner-badge">Lumina Art</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Terrazzo Masa Lambası</h3>
+                        <p class="prod-desc">El yapımı terrazzo kaideli, pirinç detaylı modern aydınlatma.</p>
+                        <div class="product-footer">
+                            <span class="prod-price">3,450 ₺</span>
+                            <span class="status-verified"><i class="fa-solid fa-circle-check"></i> Atelier Vista Onaylı</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="mock-2">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" alt="Oak Minimalist Koltuk">
+                        <span class="partner-badge">Nordic Wood</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Oak Minimalist Koltuk</h3>
+                        <p class="prod-desc">Doğal meşe iskelet üzerine keten döşemeli konforlu berjer.</p>
+                        <div class="product-footer">
+                            <span class="prod-price">12,800 ₺</span>
+                            <span class="status-verified"><i class="fa-solid fa-circle-check"></i> Atelier Vista Onaylı</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Client Presentation Simulator (THE core feature requested) -->
+    <section id="simulator-section" class="section-padding grey-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">MÜŞTERİ SUNUM SİMÜLATÖRÜ</span>
+                <h2>Canlı Upload & Admin Onay Deneyimi</h2>
+                <div class="bar"></div>
+                <p class="desc">Üçüncü parti firmaların ürün yükleme sürecinin ve admin onay havuzunun nasıl çalıştığını aşağıda canlı olarak test edebilirsiniz. Sol taraftan ürün yükleyin, sağ taraftaki admin panelinden onaylayın!</p>
+            </div>
+
+            <div class="simulator-wrapper">
+                
+                <!-- Left Column: Partner Upload Form -->
+                <div class="sim-card partner-card">
+                    <div class="sim-card-header">
+                        <div class="icon-circle partner-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        <div>
+                            <h3>1. Üçüncü Parti Firma Formu</h3>
+                            <p>Firma Yetkilisi Ürün Yükleme Ekranı</p>
+                        </div>
+                    </div>
+                    <form id="partner-upload-form" class="sim-form">
+                        <div class="form-group">
+                            <label for="comp-name">Firma / Marka Adı</label>
+                            <input type="text" id="comp-name" placeholder="Örn: Craft & Clay" required>
+                        </div>
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="prod-name">Ürün Adı</label>
+                                <input type="text" id="prod-name" placeholder="Örn: Seramik Vazo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prod-price">Fiyat (₺)</label>
+                                <input type="text" id="prod-price" placeholder="Örn: 850" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="prod-desc">Ürün Açıklaması</label>
+                            <textarea id="prod-desc" rows="2" placeholder="Ürünün malzeme ve tasarım detayları..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="prod-image-preset">Ürün Görseli (Hızlı Seçim)</label>
+                            <select id="prod-image-preset">
+                                <option value="https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=600&q=80">Seramik Çanak / Vazo (Minimalist)</option>
+                                <option value="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80">Ketenden Nevresim Seti (Doğal)</option>
+                                <option value="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=600&q=80">Ahşap Konsol / Sehpa (Modern)</option>
+                                <option value="custom">Bilgisayarımdan Yükle...</option>
+                            </select>
+                        </div>
+                        <div class="form-group hidden" id="custom-image-group">
+                            <label for="prod-image-file">Görsel Dosyası</label>
+                            <input type="file" id="prod-image-file" accept="image/*">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Onay Havuzuna Gönder</button>
+                    </form>
+                    <div id="upload-success-toast" class="success-toast hidden">
+                        <i class="fa-solid fa-circle-check"></i> Ürün başarıyla admin onay havuzuna gönderildi!
+                    </div>
+                </div>
+
+                <!-- Right Column: Admin Approval Dashboard -->
+                <div class="sim-card admin-card">
+                    <div class="sim-card-header">
+                        <div class="icon-circle admin-icon"><i class="fa-solid fa-user-shield"></i></div>
+                        <div>
+                            <h3>2. Yönetici (Admin) Paneli</h3>
+                            <p>Yalnızca Sizin Görebileceğiniz Onay Havuzu</p>
+                        </div>
+                    </div>
+                    <div class="admin-dashboard-content">
+                        <div class="dashboard-stats">
+                            <div class="stat-box">
+                                <span class="stat-num" id="pending-count">0</span>
+                                <span class="stat-label">Bekleyen</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-num" id="approved-count">2</span>
+                                <span class="stat-label">Yayında</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pending-list-wrapper">
+                            <h4>Onay Bekleyen Ürünler</h4>
+                            <div id="pending-items-list" class="pending-list">
+                                <!-- Dynamic pending items will go here -->
+                                <div class="empty-state" id="empty-pending-state">
+                                    <i class="fa-solid fa-inbox"></i>
+                                    <p>Şu anda onay bekleyen ürün bulunmuyor. Sol taraftaki formu kullanarak yeni bir ürün yükleyip simüle edebilirsiniz.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Quick Info & Contact Modal Simulation -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Keşif ve Randevu Talebi</h3>
+            <p>Atelier Vista İç Mimarlık ekibiyle projeniz hakkında görüşmek için aşağıdaki formu doldurun.</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label>Adınız Soyadınız</label>
+                    <input type="text" placeholder="Ad Soyad" required>
+                </div>
+                <div class="form-group">
+                    <label>E-posta Adresiniz</label>
+                    <input type="email" placeholder="ornek@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Proje Tipi</label>
+                    <select>
+                        <option>Konut Tasarımı</option>
+                        <option>Ofis / Çalışma Alanı</option>
+                        <option>Cafe / Restoran Tasarımı</option>
+                        <option>Mobilya / Özel Tasarım Ürün</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Mesajınız</label>
+                    <textarea placeholder="Projenizle ilgili detayları kısaca yazınız..." rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-gold btn-block">Talebi Gönder</button>
+            </form>
+            <div id="contact-success" class="success-toast hidden" style="margin-top:15px;">
+                <i class="fa-solid fa-circle-check"></i> Randevu talebiniz başarıyla alındı! En kısa sürede iletişime geçeceğiz.
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <h3>ATELIER <span>VISTA</span></h3>
+                <p>İç mimarlık stüdyomuz ve nitelikli kafemiz ile yaşam alanlarına estetik ve tat katıyoruz.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Çalışma Saatleri</h4>
+                <ul>
+                    <li>Pazartesi - Cumartesi: 08:30 - 22:00</li>
+                    <li>Pazar: 10:00 - 21:00</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>İletişim</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +90 (212) 555 4545</li>
+                    <li><i class="fa-solid fa-envelope"></i> hello@ateliervista.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Harbiye Mah. Abdi İpekçi Cad. No: 45 Nişantaşı, İstanbul</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Atelier Vista. Tüm hakları saklıdır. Müşteri Sunum Taslağı.</p>
+        </div>
+    </footer>
+
+    <!-- App JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
