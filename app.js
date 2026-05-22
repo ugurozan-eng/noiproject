@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
             brand: 'Lumina Art',
             name: 'Terrazzo Masa Lambası',
             desc: 'El yapımı terrazzo kaideli, pirinç detaylı modern aydınlatma.',
-            price: '3,450 ₺',
             image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80'
         },
         {
@@ -112,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
             brand: 'Nordic Wood',
             name: 'Oak Minimalist Koltuk',
             desc: 'Doğal meşe iskelet üzerine keten döşemeli konforlu berjer.',
-            price: '12,800 ₺',
             image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80'
         }
     ];
@@ -145,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>${prod.name}</h3>
                     <p class="prod-desc">${prod.desc}</p>
                     <div class="product-footer">
-                        <span class="prod-price">${prod.price}</span>
                         <span class="status-verified"><i class="fa-solid fa-circle-check"></i> Atelier Vista Onaylı</span>
                     </div>
                 </div>
@@ -177,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="pending-details">
                         <span class="brand-name">${prod.brand}</span>
                         <h5>${prod.name}</h5>
-                        <span class="price">${prod.price}</span>
                     </div>
                     <div class="pending-actions">
                         <button class="btn-action btn-approve" data-id="${prod.id}">Onayla</button>
@@ -208,20 +204,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Formatter for prices
-    const formatPrice = (str) => {
-        const num = parseFloat(str.replace(/[^\d]/g, ''));
-        if (isNaN(num)) return str + ' ₺';
-        return num.toLocaleString('tr-TR') + ' ₺';
-    };
-
     // Product Submission Handler
     partnerForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
         const brand = document.getElementById('comp-name').value.trim();
         const name = document.getElementById('prod-name').value.trim();
-        const price = formatPrice(document.getElementById('prod-price').value.trim());
         const desc = document.getElementById('prod-desc').value.trim();
         const imagePreset = presetSelect.value;
 
@@ -230,7 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'prod-' + Date.now(),
                 brand,
                 name,
-                price,
                 desc,
                 image: imgUrl
             };
