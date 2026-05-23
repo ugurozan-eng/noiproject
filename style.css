@@ -1433,7 +1433,8 @@ body.mode-cafe .split-hero {
 }
 
 body.mode-cafe #studio-section,
-body.mode-cafe #simulator-section {
+body.mode-cafe #simulator-section,
+body.mode-cafe #partner-showcase-section {
     display: none !important;
 }
 
