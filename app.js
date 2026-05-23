@@ -1,9 +1,110 @@
 // ATELIER VISTA - Application Logic & Interactive Simulator
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Navigation Scroll Effect
+    const body = document.body;
     const header = document.getElementById('main-header');
+    
+    // Mode Switching Elements
+    const brandLogo = document.getElementById('brand-logo');
+    const paneCafe = document.getElementById('pane-cafe');
+    const paneStudio = document.getElementById('pane-studio');
+    const heroCafeBtn = document.getElementById('hero-cafe-btn');
+    const heroStudioBtn = document.getElementById('hero-studio-btn');
+    const switchToStudioBtn = document.getElementById('switch-to-studio-btn');
+    const switchToCafeBtn = document.getElementById('switch-to-cafe-btn');
+
+    // Sections for fade animation
+    const sectionsToAnimate = [
+        document.getElementById('studio-section'),
+        document.getElementById('cafe-section'),
+        document.getElementById('partner-showcase-section'),
+        document.getElementById('simulator-section')
+    ];
+
+    // Helper to change mode with a smooth fade in
+    const switchMode = (mode) => {
+        // Reset scroll position before transition to avoid weird scroll jumps
+        window.scrollTo({ top: 0 });
+
+        // Update body class
+        body.className = `mode-${mode}`;
+
+        // Add animation class to relevant visible sections
+        sectionsToAnimate.forEach(section => {
+            if (section) {
+                section.classList.remove('mode-fade-in');
+                // Trigger reflow to restart animation
+                void section.offsetWidth;
+                section.classList.add('mode-fade-in');
+            }
+        });
+
+        // Manage mobile navigation closure
+        nav.classList.remove('active');
+        mobileMenuBtn.querySelector('i').className = 'fa-solid fa-bars';
+    };
+
+    // Click Event Listeners for Modes
+    if (paneCafe) {
+        paneCafe.addEventListener('click', (e) => {
+            // Prevent double trigger if clicking the button inside
+            if (e.target.tagName !== 'A') {
+                switchMode('cafe');
+            }
+        });
+    }
+    if (heroCafeBtn) {
+        heroCafeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            switchMode('cafe');
+        });
+    }
+
+    if (paneStudio) {
+        paneStudio.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'A') {
+                switchMode('studio');
+            }
+        });
+    }
+    if (heroStudioBtn) {
+        heroStudioBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            switchMode('studio');
+        });
+    }
+
+    if (brandLogo) {
+        brandLogo.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchMode('home');
+        });
+    }
+
+    if (switchToStudioBtn) {
+        switchToStudioBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchMode('studio');
+        });
+    }
+
+    if (switchToCafeBtn) {
+        switchToCafeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchMode('cafe');
+        });
+    }
+
+    // 1. Navigation Scroll Effect
     window.addEventListener('scroll', () => {
+        // Only apply glass backdrop scroll class when not in Home mode
+        if (body.classList.contains('mode-home')) {
+            header.classList.remove('scrolled');
+            return;
+        }
+
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
@@ -28,9 +129,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close menu when clicking link
     const navLinks = document.querySelectorAll('#main-header nav ul li a');
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            mobileMenuBtn.querySelector('i').className = 'fa-solid fa-bars';
+        link.addEventListener('click', (e) => {
+            // If it's a switch mode button, don't auto close here (handled in switchMode)
+            if (!link.classList.contains('nav-switch-btn') && link.id !== 'brand-logo') {
+                nav.classList.remove('active');
+                mobileMenuBtn.querySelector('i').className = 'fa-solid fa-bars';
+            }
         });
     });
 

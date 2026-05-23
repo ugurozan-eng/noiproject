@@ -14,19 +14,25 @@
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="mode-home">
 
     <!-- Dynamic Glass Navigation Bar -->
     <header id="main-header">
         <div class="logo">
-            <a href="#hero">what do you want</a>
+            <a href="#" id="brand-logo">what do you want</a>
         </div>
         <nav>
             <ul>
-                <li><a href="#studio-section">Stüdyo</a></li>
-                <li><a href="#cafe-section">Kafe</a></li>
-                <li><a href="#partner-showcase-section">Ortaklarımız</a></li>
-                <li><a href="#simulator-section" class="nav-btn">Simülatör & Panel</a></li>
+                <!-- Cafe Mode Links -->
+                <li class="nav-cafe-link"><a href="#cafe-section">Haftalık Seçkiler</a></li>
+                <li class="nav-cafe-link"><a href="#cafe-shop-section">Tasarım Dükkanı</a></li>
+                <li class="nav-cafe-link"><a href="#" id="switch-to-studio-btn" class="nav-switch-btn">Stüdyo Modu'na Geç</a></li>
+                
+                <!-- Studio Mode Links -->
+                <li class="nav-studio-link"><a href="#studio-section">Mimarlık Projeleri</a></li>
+                <li class="nav-studio-link"><a href="#partner-showcase-section">Tasarımcı Koleksiyonu</a></li>
+                <li class="nav-studio-link"><a href="#simulator-section" class="nav-btn">Simülatör & Panel</a></li>
+                <li class="nav-studio-link"><a href="#" id="switch-to-cafe-btn" class="nav-switch-btn">Kafe Modu'na Geç</a></li>
             </ul>
         </nav>
         <div class="menu-toggle" id="mobile-menu-btn">
@@ -43,7 +49,7 @@
                 <span class="tag">DENEYİM ALANI</span>
                 <h1>THE CAFE</h1>
                 <p>Nitelikli kahve kokusunun, özenle tasarlanmış mekan detaylarıyla buluştuğu sosyal yaşam alanı.</p>
-                <a href="#cafe-shop-section" class="btn btn-primary">Cafe Shop & Tasarım</a>
+                <a href="#" id="hero-cafe-btn" class="btn btn-primary">Kafe Dünyasına Gir</a>
             </div>
         </div>
         
@@ -54,7 +60,7 @@
                 <span class="tag">MİMARLIK STÜDYOSU</span>
                 <h1>THE STUDIO</h1>
                 <p>Estetiğin, fonksiyonelliğin ve lüksün harmanlandığı sıra dışı iç mimari projeler.</p>
-                <a href="#studio-section" class="btn btn-secondary">Projeleri İncele</a>
+                <a href="#" id="hero-studio-btn" class="btn btn-secondary">Stüdyo Dünyasına Gir</a>
             </div>
         </div>
 
@@ -223,6 +229,50 @@
                     <div class="shop-item-info">
                         <h4>Brüt Beton Sunum Tepsisi</h4>
                         <p class="shop-item-desc">Pirinç kulplu, cilalı beton döküm servis tepsisi. Minimalist ve endüstriyel iç mekan tasarımı.</p>
+                        <span class="shop-item-status"><i class="fa-solid fa-circle"></i> Stokta Var</span>
+                    </div>
+                </div>
+                <!-- Shop Item 5 -->
+                <div class="shop-item-card">
+                    <div class="shop-item-img">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80" alt="Seramik Aromaterapi Kandili">
+                    </div>
+                    <div class="shop-item-info">
+                        <h4>Aromaterapi Buhurdanlık</h4>
+                        <p class="shop-item-desc">El yapımı mat seramik, minimalist hatlara sahip uçucu yağ buhurdanlığı.</p>
+                        <span class="shop-item-status"><i class="fa-solid fa-circle"></i> Stokta Var</span>
+                    </div>
+                </div>
+                <!-- Shop Item 6 -->
+                <div class="shop-item-card">
+                    <div class="shop-item-img">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80" alt="Minimalist Meşe Kitap Standı">
+                    </div>
+                    <div class="shop-item-info">
+                        <h4>Masif Meşe Kitap Standı</h4>
+                        <p class="shop-item-desc">Doğal meşe ağacından, el işçiliğiyle üretilmiş minimalist okuma standı.</p>
+                        <span class="shop-item-status"><i class="fa-solid fa-circle"></i> Sınırlı Stok</span>
+                    </div>
+                </div>
+                <!-- Shop Item 7 -->
+                <div class="shop-item-card">
+                    <div class="shop-item-img">
+                        <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80" alt="Üfleme Cam Karaf">
+                    </div>
+                    <div class="shop-item-info">
+                        <h4>Üfleme Cam Su Karafı</h4>
+                        <p class="shop-item-desc">Zanaatkarlar tarafından elde üflenmiş, mantar kapaklı berrak kristal cam karaf.</p>
+                        <span class="shop-item-status"><i class="fa-solid fa-circle"></i> Stokta Var</span>
+                    </div>
+                </div>
+                <!-- Shop Item 8 -->
+                <div class="shop-item-card">
+                    <div class="shop-item-img">
+                        <img src="https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=600&q=80" alt="Pirinç Mum Söndürücü">
+                    </div>
+                    <div class="shop-item-info">
+                        <h4>Pirinç Mum Söndürücü</h4>
+                        <p class="shop-item-desc">Lüks pirinç kaplama, mafsallı başlığa sahip antik tarz tasarım mum söndürme aparatı.</p>
                         <span class="shop-item-status"><i class="fa-solid fa-circle"></i> Stokta Var</span>
                     </div>
                 </div>
